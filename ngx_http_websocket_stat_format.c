@@ -7,7 +7,8 @@
 
 #include "ngx_http_websocket_stat_format.h"
 
-const char PLACE_HOLDER_CHR = 'X';
+// use a char printable but never occurred in a url
+const char PLACE_HOLDER_CHR = (char)11;
 
 const char *HTTP_VAR = "$http_";
 size_t HTTP_VAR_LEN = sizeof("$http_") - 1;
